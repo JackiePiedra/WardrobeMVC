@@ -9,49 +9,65 @@
 <p>
     @Html.ActionLink("Add a new bottom to your closet", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion.Occasion1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.Season1)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BottomPhoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion.Occasion1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.Season1)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
-            @Html.ActionLink("See Details", "Details", new { id=item.BottomID }) |
-            @Html.ActionLink("Remove from closet", "Delete", new { id=item.BottomID })
-        </td>
-    </tr>
-}
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="WardrobeIndex">
+            
+            <img src="@Url.Content(item.BottomPhoto)" />
+            <h5>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
+                @Html.ActionLink("See Details", "Details", new { id = item.BottomID }) |
+                @Html.ActionLink("Remove from closet", "Delete", new { id = item.BottomID })
+            </h5>
+        </div>
+    }
+</div>
 
-</table>
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BottomName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BottomPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Occasion.Occasion1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Season.Season1)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BottomName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BottomPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Occasion.Occasion1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Season.Season1)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.BottomID }) |
+                @Html.ActionLink("See Details", "Details", new { id=item.BottomID }) |
+                @Html.ActionLink("Remove from closet", "Delete", new { id=item.BottomID })
+            </td>
+        </tr>
+    }
+
+    </table>*@

@@ -8,50 +8,12 @@
 
 <h3>Are you sure you want to remove this from your closet?</h3>
 <div>
-    <h4>Bottom</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BottomPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BottomPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Type)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion.Occasion1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion.Occasion1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.Season1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.Season1)
-        </dd>
-
-    </dl>
+    <hr/>
+    <div class="container">
+        <div class="row" id="deletePhoto">
+            <img src="@Url.Content(Model.BottomPhoto)" />
+        </div>
+    </div>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()

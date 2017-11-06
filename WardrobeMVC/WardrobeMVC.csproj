@@ -211,13 +211,17 @@
     <Content Include="Content\black pants.jpg" />
     <Content Include="Content\black sweater.jpg" />
     <Content Include="Content\booties.jpg" />
+    <Content Include="Content\boots.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\casual.jpg" />
     <Content Include="Content\flats.jpg" />
+    <Content Include="Content\gray pants.jpg" />
+    <Content Include="Content\heels.jpg" />
     <Content Include="Content\hoodie.jpg" />
     <Content Include="Content\jeans.jpg" />
     <Content Include="Content\leopard flats.jpg" />
+    <Content Include="Content\light jeans.jpg" />
     <Content Include="Content\nag.jpg" />
     <Content Include="Content\necklace.jpg" />
     <Content Include="Content\pink tee.jpg" />
