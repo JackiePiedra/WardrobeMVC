@@ -14,7 +14,7 @@
     @foreach (var item in Model)
     {
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="WardrobeIndex">
-            <h4>@Html.DisplayFor(modelItem=>item.TopName)</h4>
+            @*<h3>@Html.DisplayFor(modelItem=>item.TopName)</h3>*@
             <img src="@Url.Content(item.TopPhoto)"/>
             <h5>@Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
             @Html.ActionLink("See Details", "Details", new { id = item.TopID }) |

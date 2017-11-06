@@ -9,9 +9,24 @@
 <div>
     <h4>Details</h4>
     <hr />
-    
+    <div class="container">
+        <div class="row">
+            <img src="@Url.Content(Model.TopPhoto)" />
+        </div>
+        <div class="row">
+            @Html.DisplayFor(model => model.Type)
+           
+            
+        </div>
+        <div class="row">
+            @Html.DisplayFor(model => model.Occasion.Occasion1)
+        </div>        
+        <div class="row">
+            @Html.DisplayFor(model => model.Season.Season1)
+        </div>
+    </div>
     <dl class="dl-horizontal">
-       
+
         <dd>
             <img src="@Url.Content(Model.TopPhoto)" />
         </dd>
