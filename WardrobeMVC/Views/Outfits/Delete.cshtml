@@ -4,46 +4,32 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Remove</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Are you sure you want to remove this outfit from your closet?</h3>
 <div>
-    <h4>Outfit</h4>
+   
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Accessory.AccessoryName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Accessory.AccessoryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Bottom.BottomName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Bottom.BottomName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Footwear.FootwearName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Footwear.FootwearName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Top.TopName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Top.TopName)
-        </dd>
-
-    </dl>
+    <div class="container" id="deletePhoto">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img src="@Url.Content(Model.Top.TopPhoto)" id="outfitDetailsGrid" />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img src="@Url.Content(Model.Accessory.AccessoryPhoto)" id="outfitDetailsGrid" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img src="@Url.Content(Model.Bottom.BottomPhoto)" id="outfitDetailsGrid" />
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img src="@Url.Content(Model.Footwear.FootwearPhoto)" id="outfitDetailsGrid" />
+            </div>
+        </div>
+    </div>
+    
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
