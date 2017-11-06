@@ -36,9 +36,11 @@ h3, h5{
     text-align:center;
 }
 
-/*body{
-    text-align:center;
-}*/
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
 
 #detailsBlurb{
     font-style:italic;  
@@ -48,4 +50,9 @@ h3, h5{
 #outfitIndexGrid{
    max-height:150px;
    border-image-repeat:stretch;
+}
+
+form-horizontal{
+    background-image:url(wallpaper.jpg);
+    background-repeat:repeat;
 }
