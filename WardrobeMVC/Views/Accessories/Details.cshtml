@@ -4,53 +4,29 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.AccessoryName)</h2>
 
 <div>
-    <h4>Accessory</h4>
+    <h4>Details</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AccessoryName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessoryPhoto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccessoryPhoto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Type)
-        </dt>
-
-        <dd>
+    <div class="container" id="detailsBlurb">
+        <div class="row">
+            <img src="@Url.Content(Model.AccessoryPhoto)" />
+        </div>
+        <div class="row">
             @Html.DisplayFor(model => model.Type)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion.Occasion1)
-        </dt>
 
-        <dd>
+        </div>
+        <div class="row">
             @Html.DisplayFor(model => model.Occasion.Occasion1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.Season1)
-        </dt>
-
-        <dd>
+        </div>
+        <div class="row">
             @Html.DisplayFor(model => model.Season.Season1)
-        </dd>
-
-    </dl>
+        </div>
+    </div>
+  
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.AccessoryID }) |
