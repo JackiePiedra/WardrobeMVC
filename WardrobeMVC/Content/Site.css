@@ -73,11 +73,7 @@ dl{
 }
 
 .jumbotron{
-    background-image:url(jumbotron.jpg);
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-    color:white;
+   
     font-weight:800;
     background: rgba(150,150,150,0.6);
 }

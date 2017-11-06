@@ -235,6 +235,7 @@
     <Content Include="Content\sweatpants.jpg" />
     <Content Include="Content\tee.jpg" />
     <Content Include="Content\wallpaper.jpg" />
+    <Content Include="Database.sql" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
