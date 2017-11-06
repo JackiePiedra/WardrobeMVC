@@ -9,55 +9,16 @@
 <p>
     @Html.ActionLink("Add a top to your closet", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @*@Html.DisplayNameFor(model => model.TopName)*@
-            Top
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.TopPhoto)*@
-           
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Type)*@
-            Description
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Occasion.Occasion1)*@
-            Occasion
-        </th>
-        <th>
-            @*@Html.DisplayNameFor(model => model.Season.Season1)*@
-            Season
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TopName)
-        </td>
-        <td>
-            @*@Html.DisplayFor(modelItem => item.TopPhoto)*@
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" id="WardrobeIndex">
+            <h4>@Html.DisplayFor(modelItem=>item.TopName)</h4>
             <img src="@Url.Content(item.TopPhoto)"/>
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Type)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Occasion.Occasion1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Season.Season1)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |
-            @Html.ActionLink("See Details", "Details", new { id=item.TopID }) |
-            @Html.ActionLink("Remove from closet", "Delete", new { id=item.TopID })
-        </td>
-    </tr>
-}
-
-</table>
+            <h5>@Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+            @Html.ActionLink("See Details", "Details", new { id = item.TopID }) |
+            @Html.ActionLink("Remove from closet", "Delete", new { id = item.TopID })</h5>
+        </div>
+    }
+</div>
