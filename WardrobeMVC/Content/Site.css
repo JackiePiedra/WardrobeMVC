@@ -56,3 +56,13 @@ form-horizontal{
     background-image:url(wallpaper.jpg);
     background-repeat:repeat;
 }
+
+#outfitDetailsGrid{
+    text-align:center;
+    max-height:900px;
+}
+
+dl{
+    margin-bottom:40px;
+    margin-top:40px;
+}
