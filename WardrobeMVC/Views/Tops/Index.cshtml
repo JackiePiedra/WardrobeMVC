@@ -4,27 +4,32 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>My Tops</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add a top to your closet", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TopName)
+            @*@Html.DisplayNameFor(model => model.TopName)*@
+            Top
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TopPhoto)
+            @*@Html.DisplayNameFor(model => model.TopPhoto)*@
+           
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Type)
+            @*@Html.DisplayNameFor(model => model.Type)*@
+            Description
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Occasion.Occasion1)
+            @*@Html.DisplayNameFor(model => model.Occasion.Occasion1)*@
+            Occasion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Season.Season1)
+            @*@Html.DisplayNameFor(model => model.Season.Season1)*@
+            Season
         </th>
         <th></th>
     </tr>
@@ -35,7 +40,8 @@
             @Html.DisplayFor(modelItem => item.TopName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TopPhoto)
+            @*@Html.DisplayFor(modelItem => item.TopPhoto)*@
+            <img src="@Url.Content(item.TopPhoto)"/>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Type)
@@ -48,8 +54,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.TopID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TopID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TopID })
+            @Html.ActionLink("See Details", "Details", new { id=item.TopID }) |
+            @Html.ActionLink("Remove from closet", "Delete", new { id=item.TopID })
         </td>
     </tr>
 }

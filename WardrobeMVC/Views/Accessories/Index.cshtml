@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<WardrobeMVC.Models.Accessory>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "My Accessories";
 }
 
-<h2>Index</h2>
+<h2>My Accessories</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add a new accessory to your closet", "Create")
 </p>
 <table class="table">
     <tr>
@@ -48,8 +48,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.AccessoryID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AccessoryID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AccessoryID })
+            @Html.ActionLink("See Details", "Details", new { id=item.AccessoryID }) |
+            @Html.ActionLink("Remove from closet", "Delete", new { id=item.AccessoryID })
         </td>
     </tr>
 }

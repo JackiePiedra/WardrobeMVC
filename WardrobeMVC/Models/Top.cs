@@ -19,8 +19,9 @@ namespace WardrobeMVC.Models
         {
             this.Outfits = new HashSet<Outfit>();
         }
-    
+        
         public int TopID { get; set; }
+        
         public string TopName { get; set; }
         public string TopPhoto { get; set; }
         public string Type { get; set; }

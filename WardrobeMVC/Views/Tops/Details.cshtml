@@ -4,30 +4,32 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.TopName)</h2>
 
 <div>
-    <h4>Top</h4>
+    <h4>Details</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.TopName)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.TopName)
-        </dd>
+        </dd>*@
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.TopPhoto)
-        </dt>
+        </dt>*@
 
         <dd>
-            @Html.DisplayFor(model => model.TopPhoto)
+            @*@Html.DisplayFor(model => model.TopPhoto)*@
+            <img src="@Url.Content(Model.TopPhoto)"/>
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Type)
+            @*@Html.DisplayNameFor(model => model.Type)*@
+            Description
         </dt>
 
         <dd>
@@ -35,7 +37,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Occasion.Occasion1)
+            @*@Html.DisplayNameFor(model => model.Occasion.Occasion1)*@
+            Occasion
         </dt>
 
         <dd>
@@ -43,7 +46,8 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Season.Season1)
+            @*@Html.DisplayNameFor(model => model.Season.Season1)*@
+            Season
         </dt>
 
         <dd>
