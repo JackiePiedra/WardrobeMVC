@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WardrobeMVC.Models.Footwear>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FootwearName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FootwearPhoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Occasion.Occasion1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Season.Season1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FootwearName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FootwearPhoto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Occasion.Occasion1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Season.Season1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FootwearID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FootwearID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FootwearID })
+        </td>
+    </tr>
+}
+
+</table>
