@@ -9,6 +9,22 @@
 <div>
     <h4>Footwear</h4>
     <hr />
+    <div class="container">
+        <div class="row">
+            <img src="@Url.Content(Model.FootwearPhoto)" />
+        </div>
+        <div class="row">
+            @Html.DisplayFor(model => model.Type)
+
+
+        </div>
+        <div class="row">
+            @Html.DisplayFor(model => model.Occasion.Occasion1)
+        </div>
+        <div class="row">
+            @Html.DisplayFor(model => model.Season.Season1)
+        </div>
+    </div>
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.FootwearName)
