@@ -44,3 +44,8 @@ h3, h5{
     font-style:italic;  
     text-align:center;
 }
+
+#outfitIndexGrid{
+   max-height:150px;
+   border-image-repeat:stretch;
+}
